@@ -1,4 +1,4 @@
-package sorting
+package sorting.bubble_short
 
 fun main() {
     val numbers = intArrayOf(5, 3, 8, 4, 2)
