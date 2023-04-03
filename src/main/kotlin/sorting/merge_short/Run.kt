@@ -18,7 +18,7 @@ fun mergeSort(numbers: IntArray) {
     merge(numbers, left, right)
 }
 
-fun merge(numbers: IntArray, left: IntArray, right: IntArray) {
+private fun merge(numbers: IntArray, left: IntArray, right: IntArray) {
     var i = 0
     var j = 0
     var k = 0
