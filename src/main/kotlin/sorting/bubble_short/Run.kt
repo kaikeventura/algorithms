@@ -2,6 +2,11 @@ package sorting.bubble_short
 
 fun main() {
     val numbers = intArrayOf(5, 3, 8, 4, 2)
+    bubbleSort(numbers)
+    numbers.forEach { println(it) }
+}
+
+fun bubbleSort(numbers: IntArray) {
     val arraySize = numbers.size
     var temp: Int
 
@@ -14,6 +19,4 @@ fun main() {
             }
         }
     }
-
-    numbers.forEach { println(it) }
 }
