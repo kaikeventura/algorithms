@@ -1,4 +1,4 @@
-package sorting.merge_short
+package sorting.merge_sort
 
 fun main() {
     val numbers = intArrayOf(5, 3, 8, 4, 2)

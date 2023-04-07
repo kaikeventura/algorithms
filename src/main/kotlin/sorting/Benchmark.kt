@@ -1,8 +1,9 @@
 package sorting
 
-import sorting.bubble_short.bubbleSort
+import sorting.bubble_sort.bubbleSort
+import sorting.heap_sort.heapSort
 import sorting.insertion_sort.insertionSort
-import sorting.merge_short.mergeSort
+import sorting.merge_sort.mergeSort
 import sorting.quick_sort.quickSort
 import java.util.Random
 import kotlin.system.measureNanoTime
@@ -13,7 +14,8 @@ fun main() {
         "Bubble sort with a short list" to shortArrayNumbers.clone().let { measureNanoTime { bubbleSort(it) } },
         "Merge sort with a short list" to shortArrayNumbers.clone().let { measureNanoTime { mergeSort(it) } },
         "Quick sort with a short list" to shortArrayNumbers.clone().let { measureNanoTime { quickSort(it, 0, it.size - 1) } },
-        "Insertion sort with a short list" to shortArrayNumbers.clone().let { measureNanoTime { insertionSort(it) } }
+        "Insertion sort with a short list" to shortArrayNumbers.clone().let { measureNanoTime { insertionSort(it) } },
+        "Heap sort with a short list" to shortArrayNumbers.clone().let { measureNanoTime { heapSort(it) } }
     )
     performanceTimeAlgorithmsWithShotList.toList().sortedBy { (_, value) -> value }.toMap().forEach { println(it) }
 
@@ -24,7 +26,8 @@ fun main() {
         "Bubble sort with a big list" to bigArrayNumbers.clone().let { measureNanoTime { bubbleSort(it) } },
         "Merge sort with a big list" to bigArrayNumbers.clone().let { measureNanoTime { mergeSort(it) } },
         "Quick sort with a big list" to bigArrayNumbers.clone().let { measureNanoTime { quickSort(it, 0, it.size - 1) } },
-        "Insertion sort with a big list" to bigArrayNumbers.clone().let { measureNanoTime { insertionSort(it) } }
+        "Insertion sort with a big list" to bigArrayNumbers.clone().let { measureNanoTime { insertionSort(it) } },
+        "Heap sort with a big list" to bigArrayNumbers.clone().let { measureNanoTime { heapSort(it) } }
     )
     performanceTimeAlgorithmsWithBigList.toList().sortedBy { (_, value) -> value }.toMap().forEach { println(it) }
 }
